@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  mongo:
+    container_name: api_client
+    ports:
+      - '27017:27017'
+    expose:
+      - '27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME:spc
+      - MONGO_INITDB_ROOT_PASSWORD:123456
+      - MONGO_INITDB_DATABASE:db_api_client
+    image: mongo
